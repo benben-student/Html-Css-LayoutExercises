@@ -1,0 +1,212 @@
+块级元素居中
+        .layout{
+            width: 600px;
+            margin: 0 auto;
+        }
+
+
+⽂字样式
+        .text {
+            color: brown; /*字体颜色 red；#fof；rgb（255，255,255....）*/
+            font-size: 20px; /*字体大小 */
+            line-height: 1.5; /* ⾏⾼, font-size的倍数 */
+            font-family: Arial, Helvetica, sans-serif; /*设置文本的字体*/
+            font-weight: bold; /* 粗细 bold、normal */
+            font-style: italic; /* 斜体 italic、 normal */
+            text-decoration: underline; /* 下划线 none、underline、line-through */
+            text-align: center; /* ⽂字对⻬ center、left、right、justify */
+            text-indent: 2em; /* 缩进当前font-size的2倍 */
+            letter-spacing: 3px; /* 单个字符⽔平间隔 */
+            white-space: nowrap; /* 这三⾏让⽂字单⾏展示超出展示... */
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+        }
+
+应用实例
+.notice {
+    text-align: center;
+}
+
+.notice h2 {
+    font-size: 40px;
+}
+
+.notice p {
+    font-size: 14px;
+}
+
+.notice a {
+    color: #ea4c89;
+    text-decoration: none;
+}
+
+.notice h3 {
+    font-size: 16px;
+}
+
+列表样式
+
+<style>
+ ol,ul{
+     list-style: none; /*去掉前面的点或者数字*/
+    }
+</style>
+<body>
+     <ul>
+         <li>好名字</li>
+         <li>好名字</li>
+         <li>好名字</li>
+     </ul>
+</body>
+
+背景图片设置
+<style>
+ .item{
+  width: 100px;
+  height: 200px;
+  border: 1px solid #000;
+  background: #ccc
+  url(https://cdn.dribbble.com/users/2367860/screenshots/16337130/media/1a80f8e0a5ed85adcbd72e34e9cccac2.png) center no-repeat;
+  background-size: contain;
+        }
+</style>
+<body>
+ <div class="item"></div>
+</body>
+
+边框圆角
+<style>
+ .item{
+  border: 1px solid #000;
+  border-radius: 20px; /*边框圆角*/
+}
+</style>
+<body>
+ <div class="item"></div>
+</body>
+
+常见特效
+.box{
+ width: 100px;
+ height: 100px;
+ border: 1px solid #ccc;
+ border-radius: 50%;
+ transition: all 0.3s; /* 样式变化的时间持续0.3s */
+ cursor: pointer; /* ⿏标放置上去变成⼿指 */
+        }
+
+.box:hover{
+ box-shadow:inset -10px -10px 10px #aaa,
+ 2px 5px 10px rgba(0, 0, 0, 0.2);
+ /* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜⾊ */
+ opacity: 0.5; /* 透明度为0.3， 1为不透明，0为全透明 */
+ transform:translate(13px,13px);/* 偏移3px */
+        }
+
+两栏布局
+<style>
+ .container{
+  display: flex;
+  border: 1px solid #000;
+
+ }
+
+ .container .aside{
+  border: 1px solid red;
+  width: 100px;
+}
+
+ .container .main{
+  border: 1px solid blue;
+  flex: 1;
+ }
+</style>
+<body>
+ <div class="container">
+  <div class="main">haomingzi haomingzi haomingzi haomingzi haomingzi haomingzi haomingzi haomingzi</div>
+  <div class="aside">aside</div>
+ </div>
+</body>
+
+垂直水平居中
+ .box {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+ }
+
+均匀分布
+<style>
+ .ct{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     border: 1px solid #000;
+        }
+
+ .child{
+     /*width: 24%;*/
+        width: calc(25% - 8px);
+        height: 100px;
+        border: 1px solid red;
+        padding: 10px;
+        margin-top: 10px;
+        }
+</style>
+<body>
+     <div class="ct">
+         <div class="child"></div>
+         <div class="child"></div>
+         <div class="child"></div>
+         <div class="child"></div>
+         <div class="child"></div>
+         <div class="child"></div>
+         <div class="child"></div>
+         <div class="child"></div>
+     </div>
+</body>
+
+展示隐藏
+<style>
+ .child:hover .lable{ 
+  /*display: inline;*/
+     opacity: 1;
+
+        }
+
+ .child .lable{
+  font-style: 12px;
+  background: #aaa;
+  color: #ccc;
+  padding: 0 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all .3s;
+        /*display: none;*/
+        }
+</style>
+<body> 
+  <div class="child">
+             <span class="lable">前端</span>
+             <span class="lable">Java</span>
+ </div>
+</body>
+
+绝对定位
+<style>
+ .item span{
+  position: absolute;
+  right: 20px;
+        bottom: 20px;
+        color: #000;
+     background: red;
+        font-size: 14px;
+        border-radius: 14px;
+        padding: 2px 4px;
+        }
+</style>
+<body> 
+    <div class="item">
+         <span>在线</span>
+     </div>
+</body>
