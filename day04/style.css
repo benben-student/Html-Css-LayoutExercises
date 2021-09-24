@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 16px/1.5 Arial;
+    color: #111;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: #6e6d7a;
+}
+ol,ul{
+    list-style: none;
+}
+
+.layout{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.button{
+    background: #ea4c89;
+    padding: 6px 8px;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+}
+header{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+header .layout{
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+.logo img{
+    height: 40px;
+    margin-top: 5px;
+}
+.nav{
+    display: flex;
+    margin-left: 16px;
+}
+.nav a{
+    margin-left: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+header .extra{
+    margin-left: auto;
+    font-size: 16px;
+}
+header a{
+    margin-left: 16px;
+}
+.intro{
+    background: #f8f6fd;
+}
+.intro .layout{
+    height: 480px;
+    display: flex;
+    align-items: center;
+}
+.intro img{
+    width: 500px;
+}
+.intro h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+.intro p{
+    margin-top: 20px;
+}
+.intro .button{
+    margin-top: 20px;
+}
+.area-filter{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.area-filter .cate{
+    position: relative;
+}
+.area-filter .cate:hover .popup{
+    display: block;
+}
+.area-filter .select{
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.area-filter .popup{
+    position: absolute;
+    top: 50px;
+    width: 160px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    display: none;
+}
+.area-filter .popup li{
+    padding: 10px;
+    color: #999;
+}
+.area-filter .popup li.active{
+    font-weight: bold;
+    color: #ea4c89;
+}
+.area-filter .labels{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.area-filter .labels li{
+    color: #888;
+    margin: 0 10px;
+}
+.area-filter .button-simple{
+    margin-left: auto;
+}
+.area-filter .labels li.active{
+   background: #f0f0f1;
+   padding: 10px;
+   border-radius: 6px;
+}
